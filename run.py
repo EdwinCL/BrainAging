@@ -26,7 +26,7 @@ class experiment(object):
         self.log.info("---- Setting up experiment at " + config.folder + "----")
 
     def get_conf(self, args):
-        config_dict = importlib.import_module("configuration."+args.config).get()
+        config_dict = importlib.import_module("configurations."+args.config).get()
         config_dict["git_hash"] = self.repo.head.object.hexsha
         self.comet_exp.log_parameters(config_dict)
         config = EasyDict(config_dict)
