@@ -2,7 +2,7 @@ from keras.optimizers import Adam
 from keras.layers import Input, Add, Activation, Subtract
 from keras.models import Model
 
-from models.critics.critit_age_AD import critic_2D_with_AD
+from models.critics.critic_age_AD import critic_2D_with_AD
 from models.generators.generator_age_AD import G_unet_16_2D_bn_with_AD
 from models.basenet import BaseNet
 import os
